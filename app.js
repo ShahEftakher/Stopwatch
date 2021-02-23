@@ -19,7 +19,6 @@ function Timer() {
 //start stopwatch
 Timer.prototype.start = function () {
   ui.startBtn.disabled = true;
-  console.log(ui.startBtn);
   this.startTime = Date.now() - this.elapsedTime;
   this.timerInterval = setInterval(() => {
     this.elapsedTime = Date.now() - this.startTime;
