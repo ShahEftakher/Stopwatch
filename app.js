@@ -54,7 +54,7 @@ function UI(startBtn, pauseBtn, resetBtn, timerDisplay) {
     timer.reset();
   });
 }
-
+ 
 //display timer
 UI.prototype.display = function (displayTime) {
   this.timerDisplay.innerHTML = displayTime;
