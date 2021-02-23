@@ -35,6 +35,7 @@ Timer.prototype.pause = function () {
 
 //reset stopwatch
 Timer.prototype.reset = function () {
+  ui.startBtn.disabled = false;
   clearInterval(this.timerInterval);
   this.elapsedTime = 0;
   ui.display("00:00:00");
