@@ -1,0 +1,23 @@
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 270px;
+  width: 270px;
+
+  border: 2px solid;
+  border-radius: 50%;
+
+  color: dodgerblue;
+}
+
+.ms-custom {
+  margin-left: 3.3rem !important;
+}
+
+.time {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 38px;
+}
