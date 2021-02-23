@@ -18,6 +18,8 @@ function Timer() {
 
 //start stopwatch
 Timer.prototype.start = function () {
+  ui.startBtn.disabled = true;
+  console.log(ui.startBtn);
   this.startTime = Date.now() - this.elapsedTime;
   this.timerInterval = setInterval(() => {
     this.elapsedTime = Date.now() - this.startTime;
@@ -27,9 +29,9 @@ Timer.prototype.start = function () {
 
 //pause stopwatch
 Timer.prototype.pause = function () {
+  ui.startBtn.disabled = false;
   clearInterval(this.timerInterval);
 };
-
 
 //reset stopwatch
 Timer.prototype.reset = function () {
@@ -54,7 +56,7 @@ function UI(startBtn, pauseBtn, resetBtn, timerDisplay) {
     timer.reset();
   });
 }
- 
+
 //display timer
 UI.prototype.display = function (displayTime) {
   this.timerDisplay.innerHTML = displayTime;
@@ -80,4 +82,3 @@ UI.prototype.convertToString = function (time) {
 
   return formattedMin + ":" + formattedSec + ":" + formattedMs;
 };
-
